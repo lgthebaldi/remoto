@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Robô ES070</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Controle Robô ES070</h1>
+            <div class="connection-area">
+                <button id="btnConnect">Conectar Bluetooth</button>
+                <span id="status" class="status-disconnected">Desconectado</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Controle Manual</h2>
+                <div class="controls">
+                    <button id="btnFrente" class="control-btn up">▲</button>
+                    <button id="btnEsquerda" class="control-btn left">◄</button>
+                    <button id="btnParar" class="control-btn stop"></button>
+                    <button id="btnDireita" class="control-btn right">►</button>
+                    <button id="btnTras" class="control-btn down">▼</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Configuração de Parâmetros</h2>
+                <div class="param-group">
+                    <label for="velocidade">Velocidade Máxima:</label>
+                    <input type="range" id="velocidade" name="velocidade" min="0" max="100" value="50">
+                    <span id="velocidadeValor">50</span>
+                </div>
+                 <div class="param-group">
+                    <label for="sensibilidade">Sensibilidade:</label>
+                    <input type="range" id="sensibilidade" name="sensibilidade" min="1" max="10" value="5">
+                    <span id="sensibilidadeValor">5</span>
+                </div>
+                <button id="btnEnviarParams">Enviar Parâmetros</button>
+            </div>
+
+            <div class="card">
+                <h2>Telemetria</h2>
+                <div class="telemetry-data">
+                    <p><strong>Distância:</strong> <span id="distancia">0.00 m</span></p>
+                    <p><strong>Velocidade:</strong> <span id="velocidadeAtual">0.0 m/s</span></p>
+                    <p><strong>Bateria:</strong> <span id="bateria">100%</span></p>
+                    <p><strong>Postura (x, y, θ):</strong> <span id="postura">(0, 0, 0°)</span></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>FEM - UNICAMP</p>
+        </footer>
+    </div>
+
+    </body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

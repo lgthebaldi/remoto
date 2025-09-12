@@ -1,0 +1,164 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Largura típica de um smartphone */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+header {
+    background-color: #4A148C; /* Roxo UNICAMP */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.connection-area {
+    margin-top: 15px;
+}
+
+#btnConnect {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #E91E63;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.status-disconnected {
+    background-color: #F44336; /* Vermelho */
+    color: white;
+}
+.status-connected {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+
+
+main {
+    padding: 20px;
+}
+
+.card {
+    background-color: #fafafa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    color: #4A148C;
+}
+
+/* Estilos do Controle Manual */
+.controls {
+    display: grid;
+    grid-template-areas:
+        ". up ."
+        "left stop right"
+        ". down .";
+    justify-content: center;
+    gap: 10px;
+}
+.control-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    font-size: 24px;
+    background-color: #fff;
+    cursor: pointer;
+    color: #555;
+    transition: background-color 0.2s, color 0.2s;
+}
+.control-btn:active {
+    background-color: #4A148C;
+    color: white;
+}
+.up { grid-area: up; }
+.left { grid-area: left; }
+.stop { 
+    grid-area: stop; 
+    border-radius: 10px;
+    background-color: #F44336;
+    border-color: #F44336;
+}
+.right { grid-area: right; }
+.down { grid-area: down; }
+
+/* Estilos dos Parâmetros */
+.param-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.param-group label {
+    flex-basis: 50%;
+}
+.param-group input[type="range"] {
+    width: 100%;
+}
+#btnEnviarParams {
+    width: 100%;
+    padding: 12px;
+    background-color: #1976D2; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Estilos da Telemetria */
+.telemetry-data p {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.telemetry-data span {
+    font-weight: normal;
+    color: #000;
+}
+
+
+footer {
+    background-color: #eee;
+    color: #777;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+}
